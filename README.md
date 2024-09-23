@@ -1,14 +1,14 @@
-# Node TO DO application based on mongoDb
-
+# Node TO DO application based on MongoDB
 
 ## Available Scripts
 
-Use `npm run dev` to run project.
+Use `npm run dev` to run the project.
 
-`MONGO_URI`=''
-`SMTP_USER`='' => email
-`SMTP_PASS`="" app-password
-`JWT_SECRET`=jwt_secret_2024
-`APP_PORT`=8081
-`ERROR_CODE`= 201
-`SUCCESS_CODE`=200
+```bash
+MONGO_URI=''
+SMTP_USER=''  # email
+SMTP_PASS=''  # app-password
+JWT_SECRET=jwt_secret_2024
+APP_PORT=8081
+ERROR_CODE=201
+SUCCESS_CODE=200
