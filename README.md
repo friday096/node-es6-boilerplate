@@ -1,4 +1,4 @@
-# Node TO DO application based on MongoDB
+# Node ES6 Boilerplate API application based on MongoDB
 
 ## Available Scripts
 
