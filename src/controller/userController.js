@@ -4,12 +4,12 @@ class UserController {
   async createUser(req, res, next) {
     try {
       const userData = req.body; // Get user data from request body
-      const { token } = await userService.createUser(userData); // Call the service
+      const { token, message, status } = await userService.createUser(userData); // Call the service
 
       // Return the created user (without password) and the token
       res.status(201).json({
-        message: result.message,
-        status: 'success',
+        message: message,
+        status: status,
         token: token 
       });
       

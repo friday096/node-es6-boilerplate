@@ -7,6 +7,12 @@ import { sendEmail } from '../utils/sendEmail.js';
 class UserService {
   async createUser(userData) {
     try {
+        // Check if the email already exists
+      const existingUser = await userModel.findOne({ email: userData.email });
+      if (existingUser) {
+        return { status: 'error', message: 'Email already in use' };
+      }
+
       // Hash the user's password
       const hashedPassword = await bcrypt.hash(userData.password, 10);
       
@@ -38,11 +44,11 @@ class UserService {
       );
   
       // Return the token as a response
-      return { success: true, token, message:`User created successfully` };
+      return { staus: 'success', token, message:`User created successfully` };
       
     } catch (error) {
       // Handle error gracefully
-      return { success: false, message: error.message };
+      return { staus: 'error', message: error.message };
     }
   }
   
